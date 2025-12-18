@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salary Predictor</title>
+  <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .container {
+        background-color: white;
+        width: 400px;
+        margin: auto;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    }
+    input {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #5c6bc0;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover { background-color: #3f51b5; }
+    h1 { color: #333; }
+    h2 { color: #e91e63; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+ <div class="container">
+    <h1>Salary Predictor 💰</h1>
+    <p>Enter your experience to estimate your salary.</p>
+
+    <form action="/predict" method="POST">
+        <input type="text" name="years_experience" placeholder="Years of Experience (e.g. 2.5)" required />
+        <br>
+        <button type="submit">Predict Salary</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+ </div>
+
+</body>
+</html>
